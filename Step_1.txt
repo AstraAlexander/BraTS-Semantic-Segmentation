@@ -1,0 +1,11 @@
+Step_1: Get the data ready 
+
+1. Download the data and unzip it 
+2. segmented file name in Folder 355 has a weird name --> rename it in "BraTS20-Training_355_seg.nii"
+3. install nibabel library to handle nii files
+4. scale all volumes 
+5. combine the three non native volumes (T2, T1CE and FLAIR) into a single multi_channel volumne
+6. Reassign pixels ov value 4 to value 3 (label 3 is missing in BraTS-Dataset and it is needed for IoU)
+7. Crop volumes to remove useless blank regions around the actual volumes where the amount of annotated data is ledd than a certain percentage
+8. save all usefull volumes to the local drive as numy arrays (.npy)
+9. split image and mask into validation-/ training-dataset
