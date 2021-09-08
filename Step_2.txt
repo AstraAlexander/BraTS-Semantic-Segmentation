@@ -1,0 +1,3 @@
+Defining custom data generator
+
+keras image generator only works with .jpg, .png or .tif, but not woth .npy-data
